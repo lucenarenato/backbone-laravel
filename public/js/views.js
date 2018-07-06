@@ -34,7 +34,7 @@ App.Views.AddContact = Backbone.View.extend({
 		this.first_name = $('#first_name');
 		this.last_name = $('#last_name');
 		this.description = $('#description');
-		this.email_adress = $('#email_adress');
+		this.email_address = $('#email_address');
 	},
 
 	events: {
@@ -48,9 +48,11 @@ App.Views.AddContact = Backbone.View.extend({
 		this.collection.create({
 			first_name: this.first_name.val(), //this.$el.find('#first_name')
 			last_name: this.last_name.val(), 
-			email_adress: this.email_adress.val(), //this.$el.find('#first_name')
+			email_address: this.email_address.val(), //this.$el.find('#first_name')
 			description: this.description.val() //this.$el.find('#first_name')
 		}, { wait: true });
+
+		console.log( this.collection );
 
 		this.clearForm();
 	},
@@ -59,7 +61,7 @@ App.Views.AddContact = Backbone.View.extend({
 		this.first_name.val('');
 		this.last_name.val('');
 		this.description.val('');
-		this.email_adress.val('');
+		this.email_address.val('');
 	}
 	
 });
@@ -78,7 +80,7 @@ App.Views.EditContact = Backbone.View.extend({
 		this.form = this.$('form');
 		this.first_name = this.form.find('#edit_first_name');
 		this.last_name = this.form.find('#edit_last_name');
-		this.email_adress = this.form.find('#edit_email_address');
+		this.email_address = this.form.find('#edit_email_address');
 		this.description = this.form.find('#edit_description');
 	},
 
@@ -93,7 +95,7 @@ App.Views.EditContact = Backbone.View.extend({
 		this.model.save({
 			first_name: this.first_name.val(),
 			last_name: this.last_name.val(),
-			email_adress: this.email_adress.val(),
+			email_adress: this.email_address.val(),
 			description: this.description.val()
 		});
 

@@ -36,7 +36,7 @@ class ContactsController extends Controller
     	Contacts::create(array(
     		'first_name' => $input->first_name,
     		'last_name' => $input->last_name,
-    		'email_adress' => $input->email_adress,
+    		'email_address' => $input->email_address,
     		'description' => $input->description
     	));
 
@@ -87,7 +87,7 @@ class ContactsController extends Controller
     	$contact->first_name = $input->first_name;
     	$contact->last_name = $input->last_name;
     	$contact->description = $input->description;
-    	$contact->email_adress = $input->email_adress;
+    	$contact->email_address = $input->email_address;
 
     	$contact->save();
 

@@ -24,7 +24,7 @@
     </div>
 
     <div>
-        <label for="email_adress">Email Adress: </label>
+        <label for="email_adress">Email Address: </label>
         <input type="text" id="email_adress" name="email_adress">
     </div>
 
@@ -44,7 +44,7 @@
             <tr>
                 <td>First Name</td>
                 <td>Last Name</td>
-                <td>Email Adress</td>
+                <td>Email Address</td>
                 <td>Description</td>
                 <td>Config</td>
             </tr>
@@ -67,8 +67,8 @@
             <input type="text" id="edit_last_name" name="edit_last_name" value="<%= last_name %>">
         </div>
         <div>
-            <label for="edit_email_adress">Email Adress: </label>
-            <input type="text" id="edit_email_adress" name="edit_email_adress" value="<%= email_adress %>">
+            <label for="email_address">Email Adress: </label>
+            <input type="text" id="edit_email_address" name="edit_email_address" value="<%= email_address %>">
         </div>
 
         <div>
@@ -88,7 +88,7 @@
 <script id="allContactsTemplate" type="text/template">
         <td><%= first_name %></td>
         <td><%= last_name %></td>
-        <td><%= email_adress %></td>
+        <td><%= email_address %></td>
         <td><%= description %></td>
         <td><a href="#contacts/<%= id %>/edit" class="edit">Edit</a></td>
         <td><a href="#contacts/<%= id %>" class="delete">Delete</a></td>
@@ -111,7 +111,7 @@
         App.contacts.fetch().then(function(){
             new App.Views.App({ collection: App.contacts });
         });
-        
+
 </script>
 
 </body>

@@ -18,5 +18,5 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 ### Renato Lucena - Date = 05/07/2018.
 
 
-- Aula no video em andamento n.27
-- https://www.youtube.com/watch?v=hztAwHjVG-4&index=2&list=PL8UMCSZG3BBTCBy-2bakj9df_xe6HSPEN
+- Aula no video em andamento n.28
+- https://www.youtube.com/watch?v=y-TH67x4JXE&index=3&list=PL8UMCSZG3BBTCBy-2bakj9df_xe6HSPEN
