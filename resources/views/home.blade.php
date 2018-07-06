@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Laravel PHP Framework</title>
+        <style>
+        table thead td { font-weight: bold;}
+        .module { margin-bottom: 2em;}
+        </style>
+    </head>
 <body>
+
 <h1>Contacts</h1>
 
 <form id="addContact">
@@ -33,6 +39,60 @@
 
 </form>
 
+<table id="allContacts" class="module">
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email Adress</td>
+                <td>Description</td>
+                <td>Config</td>
+            </tr>
+        </thead>
+</table>
+
+<div id="editContact">
+
+</div>
+
+<script id="editContactTemplate" type="text/template">
+    <h2>Edit Contact: <%= first_name %> <%= last_name %></h2>
+    <form id="editContact">
+        <div>
+            <label for="edit_first_name">First Name: </label>
+            <input type="text" id="edit_first_name" name="edit_first_name" value="<%= first_name %>">
+        </div>
+        <div>
+            <label for="edit_last_name">Last Name: </label>
+            <input type="text" id="edit_last_name" name="edit_last_name" value="<%= last_name %>">
+        </div>
+        <div>
+            <label for="edit_email_adress">Email Adress: </label>
+            <input type="text" id="edit_email_adress" name="edit_email_adress" value="<%= email_adress %>">
+        </div>
+
+        <div>
+            <label for="edit_description">Description: </label>
+            <textarea id="edit_description" name="edit_description"><%= description %></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Add Contact">
+            <button type="button" class="cancel">Cancel</button>
+        </div>
+
+    </form>
+
+</script>
+
+<script id="allContactsTemplate" type="text/template">
+        <td><%= first_name %></td>
+        <td><%= last_name %></td>
+        <td><%= email_adress %></td>
+        <td><%= description %></td>
+        <td><a href="#contacts/<%= id %>/edit" class="edit">Edit</a></td>
+        <td><a href="#contacts/<%= id %>" class="delete">Delete</a></td>
+</script>
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="http://underscorejs.org/underscore.js"></script>
@@ -44,14 +104,14 @@
 <script src="js/views.js"></script>
 
 <script>
+
     new App.Router;
-    Backbone.history.start();
-
-    App.contacts = new App.Collections.Contacts;
-    App.contacts.fetch().then(function(){
-        new App.Views.App({ collection: App.contacts });
-    });
-
+        Backbone.history.start();
+        App.contacts = new App.Collections.Contacts;
+        App.contacts.fetch().then(function(){
+            new App.Views.App({ collection: App.contacts });
+        });
+        
 </script>
 
 </body>
