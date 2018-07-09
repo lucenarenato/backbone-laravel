@@ -7,11 +7,11 @@
 <p align="center"><img src="20120914_backbone-300x53.png"></p>
 
 <p align="center">
-	### Aula com Atul Zalavadiya
-    - webdesigning-art.blogspot.in/
+	Aula com Atul Zalavadiya
+    
 </p>
 
-
+- webdesigning-art.blogspot.in/
 
 ## About Laravel
 
