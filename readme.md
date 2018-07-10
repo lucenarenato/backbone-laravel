@@ -17,10 +17,29 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-
-- Aula no video em andamento n.28
-- https://www.youtube.com/watch?v=y-TH67x4JXE&index=3&list=PL8UMCSZG3BBTCBy-2bakj9df_xe6HSPEN
+- https://code.tutsplus.com/tutorials/combining-laravel-4-and-backbone--net-31745
 
 <p align="center"><img src="Screenshot_20180709_144139.png"></p>
+
+git remote add ........
+git fetch example
+git merge example/develop
+git add . && git commit -am "commit the example application structure"
+
+
+Status Codes: Responses should reply with proper status codes, fight the temptation to just place an { error: "this is an error message" } in the body of your response. Use the HTTP protocol to its fullest!
+
+200: success
+201: resource created
+204: success, but no content to return
+400: request not fulfilled //validation error
+401: not authenticated
+403: refusal to respond //wrong credentials, do not have permission (un-owned resource)
+404: not found
+500: other error
+
+composer dump-autoload
+php artisan migrate --seed
+
 
 ### Renato Lucena - Date = 05/07/2018.

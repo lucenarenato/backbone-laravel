@@ -3,6 +3,8 @@
 | Global App View
 |----------------------------------------------------
 */
+
+
 App.Views.App = Backbone.View.extend({
 	initialize: function() {
 		// console.log( this.collection.toJSON() );
@@ -137,6 +139,7 @@ App.Views.Contacts = Backbone.View.extend({
 
 	addOne: function(contact) {
 		var contactView = new App.Views.Contact({ model: contact });
+		console.log( contactView.render().el );
 		this.$el.append(contactView.render().el);
 	}
 });

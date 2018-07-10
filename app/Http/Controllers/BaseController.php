@@ -1,5 +1,10 @@
 <?php
 class BaseController extends Controller {
+
+	public function index(Request $request)
+	  {
+
+	  }
 	/**
 	 * Setup the layout used by the controller.
 	 *

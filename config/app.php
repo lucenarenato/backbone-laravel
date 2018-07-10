@@ -147,6 +147,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        'Way\Generators\GeneratorsServiceProvider',
+        //'Conarwelsh\MustacheL4\MustacheL4ServiceProvider',
+
         /*
          * Package Service Providers...
          */
@@ -159,6 +162,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+
 
     ],
 

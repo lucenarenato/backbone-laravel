@@ -21,6 +21,15 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        /*Schema::create('contacts', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email_address')->unique();
+            $table->text('description')->nullable();
+            $table->timestamps();
+        });*/
     }
 
     /**
@@ -31,5 +40,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        //Schema::drop('contacts');
     }
 }

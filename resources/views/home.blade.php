@@ -94,7 +94,8 @@
         <td><a href="#contacts/<%= id %>" class="delete">Delete</a></td>
 </script>
 
-<script src="http://code.jquery.com/jquery.js"></script>
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="http://underscorejs.org/underscore.js"></script>
 <script src="http://backbonejs.org/backbone.js"></script>
 <script src="js/main.js"></script>
@@ -107,6 +108,7 @@
 
     new App.Router;
         Backbone.history.start();
+
         App.contacts = new App.Collections.Contacts;
         App.contacts.fetch().then(function(){
             new App.Views.App({ collection: App.contacts });
